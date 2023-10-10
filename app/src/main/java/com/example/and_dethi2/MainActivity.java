@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.biometrics.BiometricPrompt;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Wrong Account Or Password", Toast.LENGTH_SHORT).show();
                 } else if (dBhelper.Login(edtUsername.getText().toString(), edtPassword.getText().toString()) == 1) {
                     Toast.makeText(MainActivity.this, "Đăng Nhập Thành Công", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this,ListRCVActivity.class));
+                    startActivity(new Intent(MainActivity.this,ListRCVActivity.class    ));
                 }
             }
         });

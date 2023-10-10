@@ -99,35 +99,16 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
         TextInputEditText edtPricePDe = view.findViewById(R.id.edtPricePD);
         TextInputEditText edtAmountPDe = view.findViewById(R.id.edtAmountPD);
         TextInputEditText edtedtLinkPD = view.findViewById(R.id.edtLinkPD);
-        ImageView ivHintPicturesUD = view.findViewById(R.id.ivHintPicturesUD);
         Button btnEdit = view.findViewById(R.id.btnUpdate);
         Button btnCancel = view.findViewById(R.id.btnCancel);
-//        ImageButton ivFindPic = view.findViewById(R.id.findPictures);
 // set dữ liệu lên lại ~~
         edtNamePDe.setText(productUpadate.getName());
         edtPricePDe.setText(String.valueOf(productUpadate.getPrice()));
         edtAmountPDe.setText(String.valueOf(productUpadate.getAmount()));
         edtedtLinkPD.setText(productUpadate.getAvatar());
-        // lấy ảnh drawable
-//        if (itemList.get(i).getAvatar() != null) {
-//            int idImage = ((Activity) context).getResources().getIdentifier(String.valueOf(itemList.get(i).getAvatar()), "drawable", ((Activity) context).getPackageName());
-//            ivHintPicturesUD.setImageResource(idImage);
-//            //ảnh treen internet
-//            if (itemList.get(i).getAvatar().startsWith("http://") || itemList.get(i).getAvatar().startsWith("https://")) {
-//                Picasso.get().load(itemList.get(i).getAvatar()).into(ivHintPicturesUD);
-//            } else {
-//                ivHintPicturesUD.setImageResource(R.drawable.ic_all_inclusive);
-//            }
-//        }
+
         builder.setView(view);
         AlertDialog dialog = builder.create();
-//        sự kiện bấm nút
-//        ivFindPic.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                new FetchImage(ivHintPicturesUD, context, edtedtLinkPD.getText().toString()).start();
-//            }
-//        });
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="@null"
+        app:title="Quản Lí Sản Phẩm"
         android:background="#ffe9b3" />
 
     <androidx.recyclerview.widget.RecyclerView
